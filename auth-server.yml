@@ -33,7 +33,7 @@ spring:
     jpa:
         generate-ddl: false
         hibernate:
-            ddl-auto: none
+            ddl-auto: create
         show-sql: true
     h2:
     console:
