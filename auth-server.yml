@@ -16,12 +16,14 @@ eureka:
 security:
     oauth2:
         client:
-            access-token-validity-seconds: 1800
-            authorized-grant-types: password,refresh_token
-            client-id: tomwellApp
-            client-secret: $2a$10$OWdyA/qUvQ71CSbMMThAgep/z3piJgSpBaMBmZpa03YWvPqeyCVEi
-            resource-ids: resource_id
-            scope: read,write
+          access-token-validity-seconds: 1800
+          authorized-grant-types: password,refresh_token
+          client-id: tomwellApp
+          client-secret: $2a$10$OWdyA/qUvQ71CSbMMThAgep/z3piJgSpBaMBmZpa03YWvPqeyCVEi
+          resource-ids: resource_id
+          scope: read,write
+        resource: 
+          filter-order: 3
 
 spring:
     datasource:
