@@ -15,26 +15,22 @@ eureka:
 
 spring:
     datasource:
-      url: jdbc:h2:mem:test
+      driver-class-name: com.mysql.jdbc.Driver
+      password: '1234'
+      platform: mysql
+      url: jdbc:mysql://db4free.net:3306/tomwel
+      username: root      
       hikari:
         maximum-pool-size: 30
         connectionTimeout: 30000
         idleTimeout: 600000
         maxLifetime: 1800000
-    jpa: 
-      properties: 
-        hibernate: 
-          id: 
-            new_generator_mappings: false
-          format_sql: true
-          jdbc: 
-            lob: 
-              non_contextual_creation: true
-          ddl-auto: validate
-    h2:
-      console:
-        enabled: true
-        path: /h2-console
+    jpa:
+        database-platform: org.hibernate.dialect.MySQLDialect
+        generate-ddl: false
+        hibernate:
+            ddl-auto: create
+        show-sql: true
         
     jackson:
       default-property-inclusion: NON_NULL
