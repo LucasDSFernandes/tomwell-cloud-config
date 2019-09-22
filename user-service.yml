@@ -3,9 +3,8 @@ server:
 
 eureka:
   instance:
-    hostname: http://tw-eureka-server.herokuapp.com/
     port: ${PORT:8091}
-    hostname: localhost
+    hostname: http://tw-eureka-server.herokuapp.com
   client:
     registerWithEureka: true
     fetchRegistry: false
