@@ -20,7 +20,7 @@ spring:
       platform: mysql
       url: jdbc:mysql://db4free.net:3306/tomwel
       username: tomwel
-      initialization-mode: always
+      ##initialization-mode: always
       hikari:
         maximum-pool-size: 30
         connectionTimeout: 30000
@@ -30,7 +30,7 @@ spring:
         database-platform: org.hibernate.dialect.MySQL8Dialect
         generate-ddl: false
         hibernate:
-            ddl-auto: none
+            ddl-auto: update
         show-sql: true
         
     jackson:
